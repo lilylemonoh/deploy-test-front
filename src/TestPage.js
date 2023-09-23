@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 function TestPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    console.log('입력한 아이디:', email);
-    console.log('입력한 비밀번호:', password);
-    
+    console.log("입력한 아이디:", email);
+    console.log("입력한 비밀번호:", password);
+
     try {
-      const response = await axios.post('http://localhost:8080/', {
+      const response = await axios.post("/", {
         email: email,
-        password: password
+        password: password,
       });
 
       if (response.status === 200) {
         // 로그인 성공 처리
-        console.log('로그인 성공');
+        console.log("로그인 성공");
       }
     } catch (error) {
       // 로그인 실패 처리
-      setErrorMessage('로그인에 실패했습니다.');
-      console.error('로그인 실패:', error);
+      setErrorMessage("로그인에 실패했습니다.");
+      console.error("로그인 실패:", error);
     }
   };
 

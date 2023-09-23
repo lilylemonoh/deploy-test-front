@@ -249,7 +249,7 @@ const ProductUpdate = () => {
           >
             등록
           </Button>
-          <Link to={"http://localhost:3000/shopping/1"}>
+          <Link to={"/shopping/1"}>
             <Button
               variant="outlined"
               color="error"

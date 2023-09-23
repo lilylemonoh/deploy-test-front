@@ -12,11 +12,11 @@ WORKDIR /app
 COPY . ./
 
 # 코드를 넘겼으면, package.json에 기술된 라이브러리를 받도록 실행할 명령을 사전작성합니다.
-RUN npm install
+RUN yarn install
 
 # 외부에 노출시킬 포트번호를 서버 실행 구문 작성 직전에 추가로 작성해주세요. 현재는 3000포트를 이용합니다.
 EXPOSE 3000
 
 # 서버 실행구문은 띄어쓰기는 ,로 대체해서 아래와 같이 리스트 내부에 문자열로 작성합니다.
 # CMD ["node", "server.js"]
-CMD npm start
+CMD yarn start
