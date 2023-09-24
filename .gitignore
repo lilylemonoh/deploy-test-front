@@ -23,4 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 
 # 민감정보
-config.js
