@@ -200,7 +200,7 @@ const Order = () => {
     try {
       const productResponse = await axios.get(`/shopping/detail/${productId}`); // 제품 정보 요청
       const IMP = window.IMP;
-      IMP.init(IAMPORT_API_KEY);
+      IMP.init(process.env.REACT_APP_IAMPORT_API_KEY);
 
       // 주문 상품 수에 따라 이름 설정
       let productName = productResponse.data.productName; // 기본 상품 이름
